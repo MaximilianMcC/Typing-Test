@@ -28,14 +28,16 @@ button {
 }
 
 .text-wrapper {
+  font-family: "Fira Code", "consolas", monospace;
+  font-size: 3rem;
   line-height: 1;
-  letter-spacing: -0.05rem;
+  letter-spacing: -0.32em;
   text-align: justify;
 }
 .text-wrapper .word {
   display: inline-block;
   white-space: nowrap;
-  margin-right: 0.25rem;
+  margin-right: 2rem;
 }
 .text-wrapper .word .letter {
   display: inline-block;

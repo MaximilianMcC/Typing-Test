@@ -34,16 +34,20 @@ button {
     border-radius: 5px;
 }
 
+
 .text-wrapper {
     
+    font-family: 'Fira Code', 'consolas', monospace;
+    font-size: 3rem;
+
     line-height: 1;
-    letter-spacing: -0.05rem;
+    letter-spacing: -0.32em;
     text-align: justify;
 
     .word {
         display: inline-block;
         white-space: nowrap;
-        margin-right: 0.25rem;
+        margin-right: 2rem;
 
         .letter {
             display: inline-block;
