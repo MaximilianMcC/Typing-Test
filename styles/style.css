@@ -29,6 +29,8 @@ button {
 
 .text-wrapper {
   font-size: 0;
+  overflow-wrap: break-word;
+  max-width: 80%;
 }
 .text-wrapper p span {
   font-family: "Fira Code", "consolas", monospace;

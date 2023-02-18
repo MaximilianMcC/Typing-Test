@@ -40,6 +40,9 @@ button {
     //? The font-size is reset to stop the <span> from adding a space after each letter.
     font-size: 0;
 
+    overflow-wrap: break-word;
+    max-width: 80%;
+    
     p {
         span {
             font-family: 'Fira Code', 'consolas', monospace;
