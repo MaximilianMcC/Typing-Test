@@ -36,22 +36,19 @@ button {
 
 
 .text-wrapper {
-    
-    font-family: 'Fira Code', 'consolas', monospace;
-    font-size: 3rem;
 
-    line-height: 1;
-    letter-spacing: -0.32em;
-    text-align: justify;
+    //? The font-size is reset to stop the <span> from adding a space after each letter.
+    font-size: 0;
 
-    .word {
-        display: inline-block;
-        white-space: nowrap;
-        margin-right: 2rem;
-
-        .letter {
-            display: inline-block;
-            white-space: nowrap;
+    p {
+        span {
+            font-family: 'Fira Code', 'consolas', monospace;
+            font-size: 50px;
+            
+            // Letter status
+            &.unused { color: #241f20; }
+            &.correct { color: white; }
+            &.incorrect { color: red; }
         }
     }
 }
