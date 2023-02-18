@@ -1,23 +1,8 @@
-let wordList = [];
-
-document.addEventListener("DOMContentLoaded", async () => {
-
-    // Get all of the words
-    //TODO: Make `words` a constant
-    wordList = await fetchJson("https://random-word-api.herokuapp.com/all");
-
-    // Start a new test
-    generateWords();
-
-});
-
-
-
 
 function generateWords() {
     
     // Get an array of random words
-    const wordCount = 100;
+    const wordCount = 30;
     let currentWords = [];
 
     // Add a random word to the `currentWords` array
@@ -31,8 +16,15 @@ function generateWords() {
     
     currentWords.forEach(word => {
         
-        let wordHtml = "";
+        word.split("").forEach(letter => {
 
+            // Add the letter to the DOM
+            textContainer.innerHTML += `<span class="unused">${letter}</span>`;
+
+        });
+
+        // Add a space after each word
+        if (word !== currentWords[currentWords.length]) textContainer.innerHTML += "<span>&nbsp;</span>";
     });
 }
 
