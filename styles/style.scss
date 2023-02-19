@@ -1,3 +1,10 @@
+$cursor-color: #ae798f;
+
+
+
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -21,20 +28,6 @@ body {
 }
 
 
-button {
-
-    display: block;
-    width: 20%;
-    margin: 0px 50px;
-    
-    background-color: #ae798f;
-    color: white;
-    padding: 30px;
-    border: none;
-    border-radius: 5px;
-}
-
-
 .text-wrapper {
 
     //? The font-size is reset to stop the <span> from adding a space after each letter.
@@ -52,6 +45,24 @@ button {
             &.unused { color: #241f20; }
             &.correct { color: white; }
             &.incorrect { color: red; }
+
+            // Add a cursor to the selected key
+            &.selected {
+                border-right: 5px solid $cursor-color;
+                animation: blinking-cursor step-end 1.1s infinite;
+            }
         }
     }
+}
+
+
+
+
+
+// Blinding cursor animation
+@keyframes blinking-cursor {
+
+    0% { border-color: $cursor-color; }
+    50% { border-color: transparent; }
+    100% { border-color: $cursor-color; }
 }

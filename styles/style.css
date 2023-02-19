@@ -16,17 +16,6 @@ body {
   height: 100%;
 }
 
-button {
-  display: block;
-  width: 20%;
-  margin: 0px 50px;
-  background-color: #ae798f;
-  color: white;
-  padding: 30px;
-  border: none;
-  border-radius: 5px;
-}
-
 .text-wrapper {
   font-size: 0;
   overflow-wrap: break-word;
@@ -44,4 +33,20 @@ button {
 }
 .text-wrapper p span.incorrect {
   color: red;
+}
+.text-wrapper p span.selected {
+  border-right: 5px solid #ae798f;
+  animation: blinking-cursor step-end 1.1s infinite;
+}
+
+@keyframes blinking-cursor {
+  0% {
+    border-color: #ae798f;
+  }
+  50% {
+    border-color: transparent;
+  }
+  100% {
+    border-color: #ae798f;
+  }
 }/*# sourceMappingURL=style.css.map */
